@@ -15,3 +15,31 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButtons = document.querySelectorAll('.toggle-subcategories');
+
+  toggleButtons.forEach(button => {
+    button.addEventListener('click', (event) => {
+      // Prevent the default button behavior
+      event.preventDefault();
+
+      // Find the parent li and the subcategories ul
+      const parentLi = event.target.closest('li');
+      const subcategoriesList = parentLi.querySelector('.subcategories');
+
+      // Toggle the display of the subcategories list
+      if (subcategoriesList) {
+        // Toggle the 'active' class on the button to rotate the arrow
+        button.classList.toggle('active');
+
+        // Toggle the display of the subcategories
+        if (subcategoriesList.style.display === 'block') {
+          subcategoriesList.style.display = 'none';
+        } else {
+          subcategoriesList.style.display = 'block';
+        }
+      }
+    });
+  });
+});

@@ -86,6 +86,87 @@ body {
   color: #007bff; /* Blue on hover for a coordinated look */
 }
 
+.dropdown-catalog {
+  position: relative;
+}
+
+/* Dropdown Menu */
+.dropdown-menu-catalog {
+  display: none; /* Hide the menu by default */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  min-width: 250px;
+  z-index: 1000;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-catalog:hover .dropdown-menu-catalog {
+  display: block; /* Show the menu on hover for the parent container */
+}
+
+/* Style for main category items */
+.dropdown-menu-catalog > li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu-catalog > li:last-child {
+  border-bottom: none;
+}
+
+.main-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.main-category span {
+  font-weight: 500;
+  color: #333;
+}
+
+.toggle-subcategories {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Rotate the arrow icon when subcategories are open */
+.toggle-subcategories.active {
+  transform: rotate(180deg);
+}
+
+/* Subcategories list */
+.subcategories {
+  display: none; /* Hide subcategories by default */
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+.subcategories li {
+  padding: 5px 0;
+}
+
+.subcategories a {
+  text-decoration: none;
+  color: #666;
+  font-size: 14px;
+}
+
+.subcategories a:hover {
+  color: #007bff; /* Or your brand's color */
+}
 .search {
   display: flex;
   align-items: center;
@@ -263,7 +344,7 @@ a:hover {
   border-radius: 1rem;
   margin: 0 0.5rem 0 0;
   color: white;
-  transition: all 0.3s ease-in-out; 
+  transition: all 0.3s ease-in-out;
 }
 
 .brand:hover {
