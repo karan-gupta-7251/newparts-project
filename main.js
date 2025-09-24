@@ -43,3 +43,26 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mainImage = document.querySelector('.img img');
+  const thumbnails = document.querySelectorAll('.imgList .imgL');
+
+  if (mainImage && thumbnails.length > 0) {
+    thumbnails.forEach(thumbnail => {
+      thumbnail.addEventListener('click', () => {
+        // Update the main image source to the clicked thumbnail's source
+        mainImage.src = thumbnail.src;
+
+        // Remove 'active' class from all thumbnails
+        thumbnails.forEach(thumb => thumb.classList.remove('active'));
+
+        // Add 'active' class to the clicked thumbnail
+        thumbnail.classList.add('active');
+      });
+    });
+
+    // Set the first thumbnail as active by default
+    thumbnails[0].classList.add('active');
+  }
+});
