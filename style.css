@@ -214,6 +214,8 @@ body {
 .img img {
   height: 31rem;
   width: 45rem;
+  border-radius: 1rem;
+
 }
 
 .imgList {
@@ -224,6 +226,7 @@ body {
 
 .imgL {
   width: 10rem;
+  border-radius: 1rem;
   
 }
 
