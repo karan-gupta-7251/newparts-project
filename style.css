@@ -28,47 +28,47 @@ body {
 .dropdown {
   position: relative;
   display: inline-block;
-  font-family: "Figtree", sans-serif; /* Using your specified font */
+  font-family: "Figtree", sans-serif; 
 }
 
 .dropdown-trigger {
   cursor: pointer;
-  font-size: 1.5rem; /* Larger icon size for better usability */
-  color: #444; /* Darker gray for contrast */
-  transition: color 0.2s ease-in-out; /* Smooth transition on hover */
+  font-size: 1.5rem; 
+  color: #444; 
+  transition: color 0.2s ease-in-out; 
 }
 
 .dropdown-trigger:hover {
-  color: #007bff; /* A nice blue on hover for visual feedback */
+  color: #007bff; 
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: 120%; /* Adjusted top to create a slight gap below the icon */
-  left: 50%; /* Center the menu relative to the trigger */
+  top: 120%; 
+  left: 50%; 
   transform: translateX(
     -50%
-  ); /* Pull it back by half its width for perfect centering */
+  ); 
   z-index: 10;
   list-style: none;
   padding: 10px 0;
   margin: 0;
   background-color: #ffffff;
-  border-radius: 8px; /* Rounded corners for a softer look */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* A subtle shadow for depth */
-  min-width: 160px; /* Ensures a consistent width for the menu */
+  border-radius: 8px; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  min-width: 160px; 
   opacity: 0;
   visibility: hidden;
   transform-origin: top center;
-  transition: all 0.3s ease-in-out; /* Transition for a smooth appearance */
+  transition: all 0.3s ease-in-out; 
 }
 
 .dropdown-menu.active {
-  display: block; /* Makes the menu visible */
+  display: block; 
   opacity: 1;
   visibility: visible;
-  top: 100%; /* Snap to a closer position when active */
+  top: 100%;
 }
 
 .dropdown-menu li a {
@@ -77,22 +77,21 @@ body {
   text-decoration: none;
   color: #333;
   font-weight: 500;
-  white-space: nowrap; /* Prevents text from wrapping */
+  white-space: nowrap; 
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f5f5f5; /* Light gray on hover */
-  color: #007bff; /* Blue on hover for a coordinated look */
+  background-color: #f5f5f5; 
+  color: #007bff; 
 }
 
 .dropdown-catalog {
   position: relative;
 }
 
-/* Dropdown Menu */
 .dropdown-menu-catalog {
-  display: none; /* Hide the menu by default */
+  display: none; 
   position: absolute;
   top: 100%;
   left: 0;
@@ -108,10 +107,10 @@ body {
 }
 
 .dropdown-catalog:hover .dropdown-menu-catalog {
-  display: block; /* Show the menu on hover for the parent container */
+  display: block;
 }
 
-/* Style for main category items */
+
 .dropdown-menu-catalog > li {
   padding: 8px 0;
   border-bottom: 1px solid #eee;
@@ -141,14 +140,14 @@ body {
   transition: transform 0.3s ease-in-out;
 }
 
-/* Rotate the arrow icon when subcategories are open */
+
 .toggle-subcategories.active {
   transform: rotate(180deg);
 }
 
-/* Subcategories list */
+
 .subcategories {
-  display: none; /* Hide subcategories by default */
+  display: none;
   list-style: none;
   padding-left: 20px;
   margin-top: 5px;
@@ -165,7 +164,7 @@ body {
 }
 
 .subcategories a:hover {
-  color: #007bff; /* Or your brand's color */
+  color: #007bff;
 }
 .search {
   display: flex;
@@ -313,7 +312,7 @@ td.key {
   font-weight: bold;
   text-align: left;
   white-space: nowrap;
-  min-width: 20rem; /* Adjust this value to control the gap */
+  min-width: 20rem; 
   padding-right: 20px;
 }
 
